@@ -9,12 +9,6 @@ const Logo = () => {
   const outlineLogoRef = useRef()
   const solidLogoRef = useRef()
 
-  useEffect(() => {
-    return setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
-
   return (
     <div className="logo-container" ref={bgRef}>
       <img

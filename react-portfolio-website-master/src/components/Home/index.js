@@ -9,28 +9,16 @@ import './index.scss'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = ['l', 'o', 'b', 'o', 'd', 'a', 'n']
-  const jobArray = [
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-    '.',
-  ]
+  const nameArray = 'imranjeet'.split('')
+  const jobArray = 'Sales Consulting Manager'.split('')
+  const interestArray = 'Oracle Linux & Virtualization'.split('')
+  const enthusiastArray = 'Kubernetes'.split('')
 
   useEffect(() => {
-    return setTimeout(() => {
+    const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 4000)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -58,8 +46,23 @@ const Home = () => {
               strArray={jobArray}
               idx={22}
             />
+            <br />
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={interestArray}
+              idx={22}
+            />
+
+            <br />
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={enthusiastArray}
+              idx={22}
+            />
           </h1>
-          <h2>Front End Developer / JavaScript Expert / Youtuber</h2>
+          <h2>
+            Full Stack Developer / AI and Blockchain Enthusiast / Avid Learner
+          </h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
