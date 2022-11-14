@@ -48,7 +48,7 @@ const Sidebar = () => {
         </NavLink>
         <NavLink
           activeclassname="active"
-          className="skills-link"
+          className="portfolio-link"
           to="/skills"
           onClick={() => setShowNav(false)}
         >
