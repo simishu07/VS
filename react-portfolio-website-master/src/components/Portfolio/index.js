@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import Loader from "react-loaders";
 import AnimatedLetters from "../AnimatedLetters";
 import "./index.scss";
-import { getDocs, collection } from 'firebase/firestore';
-import { db } from '../../firebase';
+import WordCloud from './wordcloud'
+//import { getDocs, collection } from 'firebase/firestore';
+//import { db } from '../../firebase';
 
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
     const [portfolio, setPortfolio] = useState([]);
+    const skillsArray = 'Skills'.split('')
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -18,7 +20,7 @@ const Portfolio = () => {
             clearTimeout(timer);
         }
     });
-
+/*
     useEffect(() => {
         getPortfolio();
     }, []);
@@ -27,7 +29,7 @@ const Portfolio = () => {
         const querySnapshot = await getDocs(collection(db, 'portfolio'));
         setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
     }
-
+*/
     const renderPortfolio = (portfolio) => {
         return (
             <div className="images-container">
@@ -62,7 +64,7 @@ const Portfolio = () => {
                 <h1 className="page-title">
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={"Portfolio".split("")}
+                        strArray={skillsArray}
                         idx={15}
                     />
                 </h1>

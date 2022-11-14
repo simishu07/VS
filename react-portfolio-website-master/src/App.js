@@ -6,7 +6,7 @@ import Layout from './components/Layout'
 import Skills from './components/Skills'
 //import Soundbar from './components/Soundbar'
 import './App.scss'
-//import Portfolio from './components/Portfolio'
+import Portfolio from './components/Portfolio'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Route>
       </Routes>
     </>
