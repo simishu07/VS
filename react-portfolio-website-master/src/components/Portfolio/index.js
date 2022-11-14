@@ -9,7 +9,7 @@ import WordCloud from './wordcloud'
 const Portfolio = () => { 
     const [letterClass, setLetterClass] = useState('text-animate');
     const [portfolio, setPortfolio] = useState([]);
-    const skillsArray = 'Skills'.split('')
+    const skillsArray = 'Skills & Experience'.split('')
 
     useEffect(() => {
         const timer = setTimeout(() => {
