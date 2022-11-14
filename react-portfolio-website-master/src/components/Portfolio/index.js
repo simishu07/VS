@@ -29,7 +29,7 @@ const Portfolio = () => {
         const querySnapshot = await getDocs(collection(db, 'portfolio'));
         setPortfolio(querySnapshot.docs.map((doc) => doc.data()));
     }
-*/
+
     const renderPortfolio = (portfolio) => {
         return (
             <div className="images-container">
@@ -68,11 +68,40 @@ const Portfolio = () => {
                         idx={15}
                     />
                 </h1>
-                <div>{renderPortfolio(portfolio)}</div>
             </div>
             <Loader type="pacman" />
         </>
     );
+*/
+    return (
+        <>
+          <div className="container portfolio-page">
+            <div className="text-zone">
+              <h1>
+                <AnimatedLetters
+                  letterClass={letterClass}
+                  strArray={skillsArray}
+                  idx={15}
+                />
+                <br />
+              </h1>
+              <p>
+                I love to learn about Infrastructure Management technologies.
+              </p>
+              <p>
+                Looking for a role in a company with the opportunity to work with
+                the latest technologies on challenging and diverse projects.
+              </p>
+            </div>
+    
+            <div className="tagcloud-wrap">
+              <WordCloud />
+            </div>
+          </div>
+    
+          <Loader type="pacman" />
+        </>
+      )
 }
 
 export default Portfolio;
