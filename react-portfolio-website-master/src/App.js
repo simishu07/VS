@@ -10,7 +10,6 @@ import './App.scss'
 function App() {
   return (
     <>
-      <Soundbar />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

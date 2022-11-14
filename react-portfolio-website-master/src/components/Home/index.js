@@ -11,8 +11,8 @@ const Home = () => {
 
   const nameArray = 'imranjeet'.split('')
   const jobArray = 'Sales Consulting Manager'.split('')
-  const interestArray = 'Oracle Linux & Virtualization'.split('')
-  const enthusiastArray = 'Kubernetes'.split('')
+  const interestArray = 'Cloud Native'.split('')
+  const enthusiastArray = 'Enthusiast'.split('')
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -61,7 +61,7 @@ const Home = () => {
             />
           </h1>
           <h2>
-            Full Stack Developer / AI and Blockchain Enthusiast / Avid Learner
+            Avid Learner
           </h2>
           <Link to="/contact" className="flat-button">
             CONTACT ME
