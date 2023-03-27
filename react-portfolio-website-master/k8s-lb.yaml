@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: load-balancer
+  labels:
+    app: sim-portfolio
+spec:
+  type: LoadBalancer
+  ports:
+  - name: web
+    port: 80
+    targetPort: 80
+    protocol: TCP
+    nodePort: 31002
+  selector:
+    app: sim-portfolio
